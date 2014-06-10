@@ -1,3 +1,14 @@
+language: ruby
+
+rvm:
+  - 2.1
+
+services:
+  - redis-server
+
+addons:
+  postgresql: 9.3
+
 before_script:
   - sh -e /etc/init.d/xvfb start
   - export DISPLAY=:99.0
@@ -7,14 +18,14 @@ before_script:
   - sudo /etc/init.d/postgresql restart
   - psql -c 'create database gaku_test;' -U postgres
 
-bundler_args: --without production
+bundler_args: -j4 --without development production
 
 before_install:
-  - export BUNDLE_GEMFILE="`pwd`/Gemfile"
+  - cd $GEM; export BUNDLE_GEMFILE="`pwd`/Gemfile"
 
 script:
   - bundle exec rake test_app
-  - I18N=1 bundle exec rspec
+  - I18N=1 bundle exec rspec $SUITE
 
 notifications:
   email: false
@@ -23,6 +34,3 @@ notifications:
     on_failure: always
     channels:
       - "irc.freenode.org#gaku"
-
-rvm:
-  - 2.0.0
