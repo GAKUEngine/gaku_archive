@@ -7,6 +7,7 @@ Gaku::Address.class_eval do
                     joined_resource_id: :joined_resource_id
                         }
 
+  scope :deleted,   -> { where(deleted: true) }
   default_scope -> { where(deleted: false) }
 
   def soft_delete
