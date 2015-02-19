@@ -8,6 +8,7 @@ Gaku::Contact.class_eval do
                       }
 
   default_scope -> { where(deleted: false) }
+  scope :deleted, -> { unscoped.where(deleted: true) }
 
   def soft_delete
     update_attributes(deleted: true, primary: false)

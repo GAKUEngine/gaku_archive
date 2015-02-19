@@ -2,7 +2,7 @@ module Gaku
   ContactsController.class_eval do
 
     def recovery
-      @contact = Contact.deleted.find(params[:id])
+      @contact = Contact.unscoped.deleted.find(params[:id])
       @contact.recover
       respond_with @contact
     end

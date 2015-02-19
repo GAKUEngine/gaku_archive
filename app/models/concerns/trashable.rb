@@ -3,7 +3,7 @@ module Trashable
 
   included do
     default_scope -> { where(deleted: false) }
-    scope :deleted, -> { where(deleted: true) }
+    scope :deleted, -> { unscoped.where(deleted: true) }
 
     def soft_delete
       update_attribute(:deleted, true)
