@@ -3,43 +3,43 @@ module Gaku
     class << self
 
       def students
-        Student.deleted
+        Student.unscoped.deleted
       end
 
       def teachers
-        Teacher.deleted
+        Teacher.unscoped.deleted
       end
 
       def guardians
-        Guardian.deleted
+        Guardian.unscoped.deleted
       end
 
       def exams
-        Exam.deleted
+        Exam.unscoped.deleted
       end
 
       def course_groups
-        CourseGroup.deleted
+        CourseGroup.unscoped.deleted
       end
 
       def attachments
-        Attachment.includes(:attachable).deleted
+        Attachment.includes(:attachable).unscoped.deleted
       end
 
       def student_addresses
-        Address.includes(:addressable, :country).deleted.students
+        Address.includes(:addressable, :country).unscoped.deleted.students
       end
 
       def teacher_addresses
-        Address.includes(:addressable, :country).deleted.teachers
+        Address.includes(:addressable, :country).unscoped.deleted.teachers
       end
 
       def student_contacts
-        Contact.includes(:contactable, :contact_type).deleted.students
+        Contact.includes(:contactable, :contact_type).unscoped.deleted.students
       end
 
       def teacher_contacts
-        Contact.includes(:contactable, :contact_type).deleted.teachers
+        Contact.includes(:contactable, :contact_type).unscoped.deleted.teachers
       end
 
     end

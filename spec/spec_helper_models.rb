@@ -1,4 +1,4 @@
-require_relative 'spec_helper_base'
+  require_relative 'spec_helper_base'
 
 require 'rspec/core'
 require 'rspec/rails/extensions'
@@ -15,7 +15,7 @@ require 'shoulda-matchers'
 require 'gaku/testing/factories'
 
 Dir["#{File.dirname(__FILE__)}/support/models/**/*.rb"].each { |f| require f }
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+# ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
 

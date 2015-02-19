@@ -47,8 +47,8 @@ module Gaku
     private
 
     def set_student_and_teacher_count(klass)
-      @students_count = klass.constantize.deleted.students.count
-      @teachers_count = klass.constantize.deleted.teachers.count
+      @students_count = klass.constantize.unscoped.deleted.students.count
+      @teachers_count = klass.constantize.unscoped.deleted.teachers.count
     end
 
   end
