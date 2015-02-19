@@ -1,6 +1,6 @@
-source 'http://production.s3.rubygems.org'
+source 'http://rubygems.org'
 
-gem 'gaku', github: 'GAKUEngine/gaku'
+# gem 'gaku', github: 'GAKUEngine/gaku'
 # gem 'gaku', path: '../gaku'
 
 group :test do
