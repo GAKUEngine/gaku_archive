@@ -22,3 +22,5 @@ config/initializers/secret_token.rb
 *.swo
 Gemfile.lock
 /pkg/**
+.ruby-version
+.ruby-gemset
