@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   s.requirements << 'postgresql'
   s.requirements << 'postgresql-contrib'
 
-  s.add_dependency 'gaku_core',     '~> 0.2.1'
-  s.add_dependency 'gaku_admin',    '~> 0.2.1'
-  s.add_dependency 'gaku_frontend', '~> 0.2.1'
+  s.add_dependency 'gaku_core',     '~> 0.2.2'
+  s.add_dependency 'gaku_admin',    '~> 0.2.2'
+  s.add_dependency 'gaku_frontend', '~> 0.2.2'
 
   s.add_dependency 'paper_trail',                    '3.0.0'
 end
