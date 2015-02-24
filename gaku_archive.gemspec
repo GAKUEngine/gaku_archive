@@ -3,10 +3,10 @@
 Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
   s.name         = 'gaku_archive'
-  s.version      =  '0.2.1'
+  s.version      =  '0.2.2'
   s.summary      = 'Archive engine for GAKU Engine'
-  s.description  = 'It allows archiving functionality'
-  s.required_ruby_version = '~> 2.0.0'
+  s.description  = 'Adds archiving functionality to GAKU Engine'
+  s.required_ruby_version = '~> 2.1.3'
 
   s.authors      = ['Rei Kagetsuki', 'Nakaya Yukiharu', 'Vassil Kalkov', 'Georgi Tapalilov']
   s.email        = 'info@genshin.org'
